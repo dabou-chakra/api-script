@@ -26,4 +26,4 @@ jobs:
       - name: Scan repository with GGShield
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
-        run: ggshield scan pr .
+        run: ggshield secret scan pre-commit --mode local
