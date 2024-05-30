@@ -1,9 +1,6 @@
-name: GGShield CI
+name: GGShield Secret Detection
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -27,4 +24,6 @@ jobs:
           pip install ggshield
 
       - name: Scan repository with GGShield
-        run: ggshield scan repo .
+        env:
+          GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
+        run: ggshield scan pr .
