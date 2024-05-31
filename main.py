@@ -1,7 +1,7 @@
 import requests
 
 # Secret API key
-API_KEY ="e87506ec491ae064f4e48edc7372decf2c1d70e143cff68f38cf2a309cb659dd"
+API_KEY ="b7140816ec2875064ee5e6cb34486e80"
 
 def fetch_data(endpoint):
     url = f"https://api.example.com/{endpoint}"
